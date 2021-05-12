@@ -1,0 +1,130 @@
+a, h1, h2, h3, h4, h5, h6, p, em, span, b, div, ul, li, button, input, body{
+   -moz-user-select:none;
+   -khtml-user-select:none;
+   user-select:none;
+}
+#header em {
+  font-size: 50px;
+  font-style: normal;
+  color: #f7c552;
+  text-decoration: none;
+}
+#header span{
+  font-size: 40px;
+  color: #33c1cf;
+}
+ 
+#header{
+  width: 100%;
+  height: 80px;
+  border-top: none;
+  background-image: linear-gradient( to right, rgba(0,0,0,0.7) 30%, rgba(255,255,255,0.7) 70%);
+  font-size: 20px;
+  margin-bottom: 0px;
+}
+#logo{
+  height: 80px;
+  width:20%;
+  text-decoration: none;
+  font-size: 40px;
+  float: left;
+  line-height: 80px;
+  text-align: center;
+  color: white;
+}
+a{
+  color: white;
+  text-decoration:none;
+}
+#option{
+  height: 80px;
+  width:auto;
+  float: right;
+  padding-right:5px;
+}
+#option ul {
+margin-top:0px;
+list-style: none;
+height:100%;
+padding:0px;
+}
+#option ul li {background-color: transparent;
+width: 100px;
+height:100%;
+text-align: center;
+cursor:pointer;
+}
+#option ul li img{
+	height:40px;
+	width:40px;
+	padding-top:5px;
+}
+#option ul li p{
+	font-size:15px;
+	margin-top:0px;
+	padding-top:0px;
+	text-decoration:none;
+	color:black;
+}
+#option ul li:hover{
+	background-color: rgba(255,204,102,0.7);
+	line-height:120px;
+}
+#option ul li:hover .hicon{
+	height:50px;
+}
+#option ul li:hover p{
+	display:none;
+}
+
+#option ul a {
+float:left;
+height:100%;
+}
+.hicon{
+	height:40px;
+	width:40px;
+}
+
+#option ul #ha{
+	background-color: rgba(51,193,207,0.7);
+}
+#option ul #ha p{
+	color:white;
+	font-weight:bold;
+}
+
+@media all and (max-width:720px){
+	
+	 
+	#header{
+	  background-image: linear-gradient( to bottom, rgba(0,0,0,0.8), rgba(255,255,255,0.7));
+	  height: auto;
+	}
+	#logo{
+	  float: none;
+	  height: 60px;
+	   width:100%;
+	  line-height: 50px;
+	}
+	
+	#option{
+	  height: 80px;
+	  width:100%;
+	  float: none;
+	  padding-right:0px;
+	}
+	
+	#option ul li {
+		width:100%;
+	}
+	#option ul a {
+	width:20%;
+	}
+}
+
+@media all and (max-width:550px){
+	#option ul li p{
+		font-size:14px;
+	}
+}

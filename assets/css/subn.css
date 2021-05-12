@@ -1,0 +1,96 @@
+body {
+	margin:0px;
+	padding:0px;
+}
+div {
+	margin:0px;
+	padding:0px;
+}
+#main{
+	background-image:url(../img/background2.jpg);
+	background-size: cover;
+    background-position:center;
+	background-attachment:fixed;
+    width: 100%;
+    min-height: 100vh;
+	height:100%;
+}
+#container{
+	background-color:rgba(255,255,255,0.3);
+	margin:0px auto;
+	padding-top:10px;
+	min-height: calc(100vh - 80px);
+	height:100%;
+	width:90%;
+}
+#heading{
+	width:400px;
+	margin:10px auto;
+	border-width:2px 0px;
+	/*border-image: linear-gradient( to right, transparent, black, transparent);*/
+	border-color: black;
+	border-style:solid;
+	background-image: linear-gradient( to right, transparent, rgba(247, 197, 82,1), transparent);	
+}
+h1 {
+	margin:5px auto;
+	color:#000;
+	text-align:center;
+}
+#sem{
+	list-style-type:disc;
+	list-style-position:inside;
+	height:auto;
+	border:1px solid black;
+}
+#sem li{
+	text-align:left;
+	height:40px;
+	border:1px solid black;
+	font-size:25px;
+	line-height:40px;
+	width:calc(100% - 12px);
+	padding-left:10px;
+	cursor:pointer;
+}
+#sem{
+	margin:auto;
+	width:100%;
+	padding:0px;
+}
+#sem li {
+	background-color: rgba(255,204,102,0.8);
+}
+#sem li:hover {
+	background-color: rgba(51,193,207,0.8);
+}
+
+#sub1, #sub2, #sub3, #sub4, #sub5, #sub6, #sub7, #sub8{
+	width:calc(100% - 40px);
+	padding-left:40px;
+	display: none;
+}
+#sub1 li, #sub2 li, #sub3 li, #sub4 li, #sub5 li, #sub6 li, #sub7 li, #sub8 li {
+		background-color: rgba(255,204,102,0.5);
+}
+#sub1 li:hover, #sub2 li:hover, #sub3 li:hover, #sub4 li:hover, #sub5 li:hover, #sub6 li:hover, #sub7 li:hover, #sub8 li:hover {
+	background-color: rgba(51,193,207,0.5);
+}
+
+#sem li img, #sub1 li img, #sub2 li img, #sub3 li img, #sub4 li img, #sub5 li img, #sub6 li img, #sub7 li img, #sub8 li img {
+	height:30px;
+	width:30px;
+	margin:5px;
+	float:right;
+	padding:0px;
+}
+@media only screen and (max-width:720px){
+	#container{
+		min-height: calc(100vh - 140px);
+}
+}
+@media only screen and (max-width:420px){
+	#heading{
+		width:90%;
+}
+}

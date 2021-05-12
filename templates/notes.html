@@ -1,0 +1,44 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Notes</title>
+    <link rel="stylesheet" href="{% static 'css/notes.css' %}">
+	<link rel="stylesheet" href="{% static 'css/header.css' %}">
+	<meta name="viewport" content="width=device-width,user-scalable=yes,initial-scale=1">
+  </head>
+  <body>
+    <div id="main">
+<div id="header">
+        <div id="logo">
+          <a href="../" ><b><em>N</em><span>OTES</span></b></a>
+        </div>
+        <div id="option">
+          <ul>
+            <a href="../"><li><img class="hicon" src="{% static 'icons/home.png' %}"/><br><p>HOME</p></li></a>
+            <a href=""><li id="ha"><img class="hicon" src="{% static 'icons/notes.png' %}"/><br><p>NOTES</p></li></a>
+            <a href="papers"><li><img class="hicon" src="{% static 'icons/sp.png' %}"/><br><p>PAPERS</p></li></a>
+            <a href="about"><li><img class="hicon" src="{% static 'icons/about.png' %}"/><br><p>ABOUT US</p></li></a>
+            <a href="contact"><li><img class="hicon" src="{% static 'icons/contact.png' %}"/><br><p>CONTACT US</p></li></a>
+          </ul>
+        </div>
+      </div>
+
+      {% for sub in subs %}
+      <div id="container">
+        <div id=imgcontainer>
+          <a href="{{sub.ref}}">
+          <div onclick="index.html" class="imgdiv">
+            <div class="imgdiv2">
+                <div class="img"><img src="{{sub.icon.url}}" alt=""></br>{{sub.name}}</div>
+              </div>
+          </div>
+        </a>
+		    </div>
+      </div>
+      {% endfor %}
+
+    </div>
+  </body>
+</html>

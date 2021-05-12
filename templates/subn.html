@@ -1,0 +1,97 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Notes</title>
+    <link rel="stylesheet" href="{% static 'css/subn.css' %}">
+	<link rel="stylesheet" href="{% static 'css/header.css' %}">
+	<meta name="viewport" content="width=device-width,user-scalable=yes,initial-scale=1">
+  </head>
+  <body>
+    <div id="main">
+<div id="header">
+        <div id="logo">
+          <a href="../" ><b><em>N</em><span>OTES</span></b></a>
+        </div>
+        <div id="option">
+          <ul>
+            <a href="../"><li><img class="hicon" src="{% static 'icons/home.png' %}"/><br><p>HOME</p></li></a>
+            <a href="notes"><li id="ha"><img class="hicon" src="{% static 'icons/notes.png' %}"/><br><p>NOTES</p></li></a>
+            <a href="papers"><li><img class="hicon" src="{% static 'icons/sp.png' %}"/><br><p>PAPERS</p></li></a>
+            <a href="about"><li><img class="hicon" src="{% static 'icons/about.png' %}"/><br><p>ABOUT US</p></li></a>
+            <a href="contact"><li><img class="hicon" src="{% static 'icons/contact.png' %}"/><br><p>CONTACT US</p></li></a>
+          </ul>
+        </div>
+	  </div>
+	  
+	  <div id="container">
+		<div id="heading"><h1>{{streamname}}</h1></div>
+		<ul id="sem">
+			<li  onclick='show("sub1","1stsem")'>1st semester <img id="1stsem" src="{% static 'icons/up.png' %}"></li>
+				<ul id="sub1">
+				{% for o in obj1 %}
+				<a href="media/{{o.pdf}}",download><li>{{o.subject}}<img src="{% static 'icons/pdf.png' %}"></li></a>
+				{% endfor %}
+				</ul>
+			<li  onclick='show("sub2","2ndsem")'>2nd semester <img id="2ndsem" src="{% static 'icons/up.png' %}"></li>
+				<ul id="sub2">
+				{% for o in obj2 %}
+				<a href="media/{{o.pdf}}",download><li>{{o.subject}}<img src="{% static 'icons/pdf.png' %}"></li></a>
+				{% endfor %}
+				</ul>
+			<li  onclick='show("sub3","3rdsem")'>3rd semester <img id="3rdsem" src="{% static 'icons/up.png' %}"></li>
+				<ul id="sub3">
+				{% for o in obj3 %}
+				<a href="media/{{o.pdf}}",download><li>{{o.subject}}<img src="{% static 'icons/pdf.png' %}"></li></a>
+				{% endfor %}
+				</ul>
+			<li  onclick='show("sub4","4thsem")'>4th semester <img id="4thsem" src="{% static 'icons/up.png' %}"></li>
+				<ul id="sub4">
+				{% for o in obj4 %}
+				<a href="media/{{o.pdf}}",download><li>{{o.subject}}<img src="{% static 'icons/pdf.png' %}"></li></a>
+				{% endfor %}
+				</ul>
+			<li  onclick='show("sub5","5thsem")'>5th semester <img id="5thsem" src="{% static 'icons/up.png' %}"></li>
+				<ul id="sub5">
+				{% for o in objp5 %}
+				<a href="media/{{o.pdf}}",download><li>{{o.subject}}<img src="{% static 'icons/pdf.png' %}"></li></a>
+				{% endfor %}
+				</ul>
+			<li  onclick='show("sub6","6thsem")'>6th semester <img id="6thsem" src="{% static 'icons/up.png' %}"></li>
+				<ul id="sub6">
+				{% for o in obj6 %}
+				<a href="media/{{o.pdf}}",download><li>{{o.subject}}<img src="{% static 'icons/pdf.png' %}"></li></a>
+				{% endfor %}
+				</ul>
+			<li  onclick='show("sub7","7thsem")'>7th semester <img id="7thsem" src="{% static 'icons/up.png' %}"></li>
+				<ul id="sub7">
+				{% for o in obj7 %}
+				<a href="media/{{o.pdf}}",download><li>{{o.subject}}<img src="{% static 'icons/pdf.png' %}"></li></a>
+				{% endfor %}
+				</ul>
+			<li  onclick='show("sub8","8thsem")'>8th semester <img id="8thsem" src="{% static 'icons/up.png' %}"></li>
+				<ul id="sub8">
+				{% for o in obj8 %}
+				<a href="media/{{o.pdf}}",download><li>{{o.subject}}<img src="{% static 'icons/pdf.png' %}"></li></a>
+				{% endfor %}
+				</ul>
+		</ul>
+      </div>
+    </div> 
+
+  </body>
+</html>
+<script>/*Reffered to Nihal Thakre CSE Patel College-9098096492*/
+function show(ul,img){
+	var uld = window.getComputedStyle(document.getElementById(ul)).getPropertyValue('display');
+	if (uld == "none"){
+			document.getElementById(ul).style.display = "block";
+			document.getElementById(img).src = "{% static 'icons/down.png' %}";
+		}
+		else {
+			document.getElementById(ul).style.display = "none";
+			document.getElementById(img).src = "{% static 'icons/up.png' %}";
+		}
+}
+</script>

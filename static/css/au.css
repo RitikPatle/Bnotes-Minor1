@@ -1,0 +1,138 @@
+body{
+  margin: 0px;
+  padding: 0px;
+}
+div{
+  margin:0px;
+  padding: 0px;
+}
+a{
+  text-decoration: none;
+}
+#main{
+  /*background-image: linear-gradient(to bottom, rgba(0,255,255,0.6) 70%, rgba(255,255,255,0.5));*/
+  background-image: url(../img/background.jpg);
+  background-size: cover;
+  background-position:center;
+  background-attachment: fixed;
+  width: 100%;
+  height: 100%;
+  min-height: 100vh;
+  margin: 0px;
+}
+#container{
+	
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  align-items: center;
+  text-align: center;
+}
+.member{
+  width:33.33%;
+  height:100%;
+  float: left;
+	/*border: .1px solid transparent;*/
+}
+.aboutm{
+	font-size:25px;
+	margin:20px 40px 0px 40px;
+	text-align:justify;
+    color: rgb(255,255,255);
+}
+#team{
+	height: calc(100vh - 80px);
+}
+.memberimg{
+  background-size: cover;
+  background-position: center;
+  width:250px;
+  height: 250px;
+  border: 4px solid white;
+  border-radius: 50%;
+  margin: auto;
+  margin-top: 10px;
+
+}
+.m1{
+  background-image: url('../img/m1.jpg');
+}
+.m2{
+  background-image: url('../img/m2.jpg');
+}
+.m3{
+  background-image: url('../img/m3.jpg');
+}
+.mname{
+  text-transform: capitalize;
+  font-size: 40px;
+  color: rgb(255,255,255);
+  text-align: center;
+}
+.si{
+  width: 100%;
+  height: 40px;
+  margin-top:10px;
+
+}
+.siimgdiv{
+  width:40px;
+  height: 40px;
+  margin: auto;
+  border-radius: 25%;
+  background-color: white;
+  margin-right:10px;
+  float: left;
+}
+.siimgdiv img{
+  width:30px;
+  height: 30px;
+  margin: 5px;
+
+}
+.siimgdiv1{
+  padding-left: calc(50% - 20px);
+}
+.siimgdiv2{
+  padding-left: calc(50% - 45px);
+}
+.siimgdiv3{
+  padding-left: calc(50% - 70px);
+}
+.siimgdiv4{
+  padding-left: calc(50% - 95px);
+}
+.siimgdiv5{
+  padding-left: calc(50% - 120px);
+}
+@media screen and (max-width:1120px){
+  .aboutm{
+	font-size:25px;
+	margin:20px 10px 0px 15px;
+  
+}	
+}
+@media screen and (max-width:800px){
+  .member{
+    width:100%;
+    float: none;
+	overflow: hidden;
+	border-bottom: 2px double black;
+	padding-bottom:10px;
+  }
+  #team{
+	height: 100%;
+	}
+  .aboutm{
+	font-size:25px;
+	margin:20px 12% 0px 12%;
+  
+}
+}
+@media screen and (max-width:500px){
+		.aboutm{
+	font-size:25px;
+	margin:20px 40px 0px 40px;
+  
+}
+}

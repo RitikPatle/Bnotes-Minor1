@@ -1,0 +1,52 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Notes</title>
+    <link rel="stylesheet" href="{% static 'css/cu.css' %}">
+	<link rel="stylesheet" href="{% static 'css/header.css' %}">
+	<meta name="viewport" content="width=device-width, user-scalable=no,initial-scale=1">
+  </head>
+  <body>
+    <div id="main">
+	   <div id="header">
+        <div id="logo">
+          <a href="../" ><b><em>N</em><span>OTES</span></b></a>
+        </div>
+        <div id="option">
+          <ul>
+            <a href="../"><li><img class="hicon" src="{% static 'icons/home.png' %}"/><br><p>HOME</p></li></a>
+            <a href="notes"><li><img class="hicon" src="{% static 'icons/notes.png' %}"/><br><p>NOTES</p></li></a>
+            <a href="papers"><li><img class="hicon" src="{% static 'icons/sp.png' %}"/><br><p>PAPERS</p></li></a>
+            <a href="about"><li><img class="hicon" src="{% static 'icons/about.png' %}"/><br><p>ABOUT US</p></li></a>
+            <a href=""><li id="ha"><img class="hicon" src="{% static 'icons/contact.png' %}"/><br><p>CONTACT US</p></li></a>
+          </ul>
+        </div>
+      </div>
+      <div id="container">
+		<div id="formdiv">
+			<form autocomplete="off" action="feedback" method="POST">
+          {% csrf_token %}
+				<input type="text" name="name" placeholder="Name" /></br>
+				<input type="email" name="email" placeholder="Email" /></br>
+				<input type="text" name="mobno" placeholder="Mobile No." pattern="[0-9]{10}"/></br>
+				<input type="text" name="comments" placeholder="Comments" /></br>
+				<input id="submitbtn" type="submit" name="Submit" placeholder="Submit" value="Submit"/></br>
+
+			</form>
+		</div>
+		<div id="cudiv">
+			<a href=""><div class="cudivsec" id="emailus" >
+			<div class="cuicon"><img src="{% static 'icons/email2.png' %}"/></div>
+			<div class="cutext" id="etext"> care.btechnotes@gmail.com </div>
+			</div></a>
+			<a href=""><div class="cudivsec" id="address">
+			<div class="cuicon"> <img src="{% static 'icons/location2.png' %}"/></div>
+			<div class="cutext" id="ltext"> Truba College of Science & Technology, Badwai, Karond (Bhopal, M.P.) </div>
+			</div></a>
+		</div>
+	  </div>
+    </div>
+  </body>
+</html>

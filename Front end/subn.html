@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Notes</title>
+    <link rel="stylesheet" href="css/subn.css">
+	<link rel="stylesheet" href="css/header.css">
+	<meta name="viewport" content="width=device-width,user-scalable=yes,initial-scale=1">
+  </head>
+  <body>
+    <div id="main">
+<div id="header">
+        <div id="logo">
+          <a href="#" ><b><em>N</em><span>OTES</span></b></a>
+        </div>
+        <div id="option">
+          <ul>
+            <a href="index.html"><li><img class="hicon" src="icons/home.png"/><br><p>HOME</p></li></a>
+            <a href="notes.html"><li id="ha"><img class="hicon" src="icons/notes.png"/><br><p>NOTES</p></li></a>
+            <a href="sample papers.html"><li><img class="hicon" src="icons/sp.png"/><br><p>PAPERS</p></li></a>
+            <a href="about us.html"><li><img class="hicon" src="icons/about.png"/><br><p>ABOUT US</p></li></a>
+            <a href="cu.html"><li><img class="hicon" src="icons/contact.png"/><br><p>CONTACT US</p></li></a>
+          </ul>
+        </div>
+      </div>
+      <div id="container">
+		<div id="heading"><h1> Computer Science</h1></div>
+		<ul id="sem">
+			<li  onclick='show("sub","1stsem")'>1st semester <img id="1stsem" src="icons/down.png"></li>
+				<ul id="sub">
+				<li onclick='show("ut","1sub")'>M-1<img id="1sub" src="icons/down.png"></li>
+					<ul id="ut">
+					<li>unit-1<img src="icons/pdf.png"></li>
+					<li>unit-1<img src="icons/pdf.png"></li>
+					<li>unit-1<img src="icons/pdf.png"></li>
+					<li>unit-1<img src="icons/pdf.png"></li>
+					<li>unit-1<img src="icons/pdf.png"></li>
+					</ul>
+				<li>M-1</li>
+				<li>M-1</li>
+				<li>M-1</li>
+				<li>M-1</li>
+				</ul>
+			<li>2nd semester </li>
+			<li>3rd semester </li>
+			<li>4th semester </li>
+			<li>5th semester </li>
+			<li>6th semester </li>
+			<li>7th semester </li>
+			<li>8th semester </li>
+		</ul>
+      </div>
+    </div>
+  </body>
+</html>
+<script>/*Reffered to Nihal Thakre CSE Patel College*/
+function show(ul,img){
+	var uld = document.getElementById(ul).style.display ;
+	if (uld == "none"){
+		document.getElementById(ul).style.display = "block";
+		document.getElementById(img).src = "icons/up.png";
+	}
+	else {
+		document.getElementById(ul).style.display = "none";
+		document.getElementById(img).src = "icons/down.png";
+	}
+}
+</script>
